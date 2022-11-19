@@ -17,7 +17,7 @@ int main() {
     // Capacity of vector elements (capacity is how many elements vector can hold(reserved space))
     cout << num.capacity() << endl;
 
-    // Pushing to back of vector element
+    // Pushing a number to back of vector element
     num.push_back(5);
     for (int i = 0; i < num.size(); i++) {
        cout << num[i] << endl;
