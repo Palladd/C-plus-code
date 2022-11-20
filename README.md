@@ -1,4 +1,4 @@
-# PROB notes
+# Notes and explenation
 ### ***Includes for each loop, vectors and dynamic arrays***
 <br>
 
