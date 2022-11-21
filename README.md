@@ -25,8 +25,9 @@ return 0;
 using namespace std;
  
 int main() {
-
+    // Declaration of vector
     vector <int> num = {1, 2, 3, 4};
+
     // Front element of vector
     cout << num.front() << endl;
 
