@@ -21,7 +21,7 @@ void bubbleSort(int arr[], int &n) {
 
 void array(int arr[], int &n) {
 	cout << endl;
-	cout << "Tablica nieposortowana: " << endl;
+	cout << "Unsorted array: " << endl;
 	
 	for (int i = 0; i<n; i++) {
 		arr[i] = rand() % 100;
@@ -39,7 +39,7 @@ int main() {
 	system("color ce");
 	
 	int n;
-	cout << "Podaj liczbê elementów: ";
+	cout << "Enter number of elements: ";
 	cin >> n;
 	
 	int arr[n];
@@ -48,7 +48,7 @@ int main() {
 	
 	cout << endl;
 	cout << endl;
-	cout << "Tablica posortowana: " << endl;
+	cout << "Sorted array: " << endl;
 	for (int i = 0; i<n; i++) {
 		cout << arr[i] << " "; 
 	}
