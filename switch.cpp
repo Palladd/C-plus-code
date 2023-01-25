@@ -8,7 +8,11 @@ float add(float a, float b) {
 }
 
 double substraction(double *a, double *b) {
-	return a-b;
+	return *a-(*b);
+}
+
+int division(int a, int b) {
+	return a/b;
 }
 
 int main() {
@@ -20,16 +24,16 @@ int main() {
 	double a, b;
 	char x;
 	
-	cout << "Wpisz pierwsz¹ liczbê, któr¹ chcesz obliczyæ: ";
+	cout << "Enter first number you want to calculate: ";
 	cin >> a;
 	
-	cout << "Wpisz drug¹ liczbê, któr¹ chcesz obliczyæ: ";
+	cout << "Enter second number you want to calculate: ";
 	cin >> b;
 	
 	cout << endl;
 	
-	cout << "Dostêpne znaki to: '+', '-', '/'." << endl;
-	cout << "Wpisz znak umo¿liwjaj¹cy wykonanie dzia³ania: ";
+	cout << "Avaible characters are: '+', '-', '/'." << endl;
+	cout << "Enter character that perform the calculation: ";
 	cin >> x;
 	
 	switch (x) {
@@ -42,7 +46,7 @@ int main() {
 		break;
 		
 		case '/': 
-			cout << add(a, b) << endl;
+			cout << division(a, b) << endl;
 		break;
 	}
 
