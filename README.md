@@ -1,5 +1,5 @@
 # Notes and explenation
-### ***Includes for each loop, vectors and dynamic arrays***
+### ***Includes for each loop, vectors, dynamic arrays, switch and bubble sorting***
 <br>
 
 
