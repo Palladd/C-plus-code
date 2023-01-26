@@ -1,9 +1,10 @@
 # Notes and explenation
-### ***Includes for each loop, vectors and dynamic arrays***
+### ***Includes for each loop, vectors, dynamic arrays, switch and bubble sorting***
 <br>
 
 
-*For each loop:*
+## *For each loop:*
+*Code is writing to terminal items in array by **for each** loop.*
 ```c++
 #include <iostream>
 using namespace std;
@@ -18,7 +19,8 @@ return 0;
 }
 ```
 
-*Vectors:*
+## *Vectors:*
+*Code is presenting most vital informations about **vectors.***
 ```c++
 #include <iostream>
 #include <vector>
@@ -64,7 +66,8 @@ int main() {
 }
 ```
 
-*Dynamic arrays:*
+## *Dynamic arrays:*
+*Code is executing **dynamic array.***
 ```c++
 #include <iostream>
 using namespace std;
@@ -97,4 +100,123 @@ int x;
     return 0;
 }
 
+```
+
+## *Bubble Sort*
+*Code contain alghoritm which is **sorting by bubble** method (from lowest to highest) random numbers (from 0 to 100 ) in array.*
+```c++
+#include <bits/stdc++.h>
+#include <ctime>
+
+using namespace std;
+
+
+void bubbleSort(int arr[], int &n) {
+	int temp;
+	
+	for(int i=0; i<n; i++) {
+		for(int j=0; j<n; j++) {
+			if(arr[j] > arr[j+1]) {
+				swap(arr[j], arr[j+1]);
+			}
+		}
+	}
+}
+
+
+void array(int arr[], int &n) {
+	cout << endl;
+	cout << "Unsorted array: " << endl;
+	
+	for (int i = 0; i<n; i++) {
+		arr[i] = rand() % 100;
+		cout << arr[i] << " "; 
+	}
+	
+	bubbleSort(arr, n);
+}
+
+
+int main() {
+	srand(time(NULL));
+	setlocale(LC_CTYPE, "Polish");
+	system("title Bubble Sort");
+	system("color ce");
+	
+	int n;
+	cout << "Enter number of elements: ";
+	cin >> n;
+	
+	int arr[n];
+
+	array(arr, n);
+	
+	cout << endl;
+	cout << endl;
+	cout << "Sorted array: " << endl;
+	for (int i = 0; i<n; i++) {
+		cout << arr[i] << " "; 
+	}
+
+    return(0);
+}
+```
+
+## *Switch*
+*Code is a very simple calculator which is operated by **switch loop**. It calculates addition, substraction and division.*
+```c++
+#include <bits/stdc++.h>
+#include <ctime>
+
+using namespace std;
+
+float add(float a, float b) {
+	return a+b;
+}
+
+double substraction(double *a, double *b) {
+	return *a-(*b);
+}
+
+int division(int a, int b) {
+	return a/b;
+}
+
+int main() {
+	srand(time(NULL));
+	setlocale(LC_CTYPE, "Polish");
+	system("title Switch");
+	system("color ce");
+	
+	double a, b;
+	char x;
+	
+	cout << "Enter first number you want to calculate: ";
+	cin >> a;
+	
+	cout << "Enter second number you want to calculate: ";
+	cin >> b;
+	
+	cout << endl;
+	
+	cout << "Avaible characters are: '+', '-', '/'." << endl;
+	cout << "Enter character that perform the calculation: ";
+	cin >> x;
+	
+	switch (x) {
+		case '+': 
+			cout << add(a, b) << endl;
+		break;
+		
+		case '-': 
+			cout << substraction(&a, &b) << endl;
+		break;
+		
+		case '/': 
+			cout << division(a, b) << endl;
+		break;
+	}
+
+    return(0);
+}
 ```
