@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
- 
+
 int main() {
     // Dearation od vector
     vector <int> num = {1, 2, 3, 4};
